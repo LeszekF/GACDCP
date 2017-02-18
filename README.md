@@ -15,5 +15,5 @@
   <li>Script merges data from training and test data fames.</li>
   <li>Script clean data and leave only subject_id, label (of activity) and all measures with mean and standard deviation column.</li>
   <li>Script calculates mean of each measure column by subject_id and label.</li>
-  <li>Results are saved in tidydata.txt file (no column\no rows).</li>
+  <li>Results are saved in tidydata.txt file.</li>
 </ol>
