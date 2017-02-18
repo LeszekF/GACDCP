@@ -82,4 +82,4 @@ str(data_all)
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 tidy_data <- aggregate(. ~subject_id + label, data_all, mean) # aggregate (mean) all measures by subject_id, label
 str(data_all)
-write.table(tidy_data, file = "tidydata.txt",col.names=FALSE, row.names=FALSE) # save data to txt file (no column/row names)
+write.table(tidy_data, file = "tidydata.txt",row.names=FALSE) # save data to txt file (no column/row names)
