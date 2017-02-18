@@ -38,7 +38,7 @@
   <li>Extracts only the measurements on the mean and standard deviation for each measurement</li>
   <li>Sets more descriptive variable names</li>
   <li>Calculates mean for each measurement by subject_id, label column</li>
-  <li>Saves data to tidydata.txt file (no column/row names)</li>
+  <li>Saves data to tidydata.txt file</li>
 </ol>
 </header>
 <header>
