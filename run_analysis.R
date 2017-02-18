@@ -6,7 +6,9 @@ library(dplyr)
 # Download data/unzip
 fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileURL, "dataset.zip")
-unzip("dataset.zip")
+if (!file.exists("UCI HAR Dataset")) { 
+  unzip("dataset.zip")
+}
 
 # Activity Lables
 activity_lables <- read.table("UCI HAR Dataset/activity_labels.txt") # read txt to data.frame
@@ -79,4 +81,5 @@ names(data_all) <- sub("Mag","Euclidean",names(data_all))
 str(data_all)
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 tidy_data <- aggregate(. ~subject_id + label, data_all, mean) # aggregate (mean) all measures by subject_id, label
+str(data_all)
 write.table(tidy_data, file = "tidydata.txt",col.names=FALSE, row.names=FALSE) # save data to txt file (no column/row names)
